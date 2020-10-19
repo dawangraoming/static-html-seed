@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Guide Pages</title>
+</head>
+<body>
+<h1>Guide Pages</h1>
+<ul>
+    <% group.forEach(function(item){ %>
+        <li>
+            <dl>
+                <dt><%= item.name %></dt>
+                <% item.pages.forEach(function(page){ %>
+                    <dd><a href="<%= page.path %>"><%= page.name %></a></dd>
+                <% }) %>
+            </dl>
+        </li>
+    <% }) %>
+</ul>
+</body>
+</html>
